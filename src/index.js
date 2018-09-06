@@ -7,6 +7,7 @@ import 'iview/dist/styles/iview.css'
 
 import App from './app.vue'
 import FunView from './views/fun_page.vue'
+import TestView from './views/test_page.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueHighlightJS)
@@ -17,7 +18,8 @@ new Vue({
   template: '<App/>',
   router: new VueRouter({
     routes: [
-      {path: '/', name: 'fun', component: FunView}
+      {path: '/', name: 'fun', component: FunView},
+      {path: '/test', name: 'test', component: TestView}
     ],
   }),
   components: {App},
