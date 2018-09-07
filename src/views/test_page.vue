@@ -4,6 +4,11 @@
 		<div>{{message}}</div>
 		<div>{{expr}}</div>
 		<div>{{fans}}</div>
+		<ul id="example-1">
+		  <li v-for="item in items">
+		    {{ item.message }}
+		  </li>
+		</ul>
 	</div>
 </template>
 <script>
@@ -11,7 +16,11 @@
 		data : function() {
 			return {
 				message : "hello world",
-				fans : null
+				fans : null,
+				items: [
+			      { message: 'Foo' },
+			      { message: 'Bar' }
+			    ]
 			}
 		},
 		computed : {
